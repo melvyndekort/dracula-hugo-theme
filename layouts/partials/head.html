@@ -1,0 +1,15 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{{ .Site.Title }} | {{ .Page.Title }}</title>
+  <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
+  <meta name="author" content="{{ .Site.Params.Author }}">
+  <link rel="icon" href="https://assets.easydmarc.com/872082e7b7/bimi-mdekort-nl-6bfeef63.svg">
+
+  {{ $options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed") }}
+  {{ $style := resources.Get "sass/main.scss" | toCSS  $options | minify }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" media="screen">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" rel="stylesheet">
+</head>
