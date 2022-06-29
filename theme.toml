@@ -1,7 +1,7 @@
-name = "Mytheme"
+name = "dracula-hugo-theme"
 license = "MIT"
-description = ""
-homepage = "https://linktr.ee/melvyndekort"
+description = "My Dracula theme for Hugo static site generator"
+homepage = "https://github.com/melvyndekort/dracula-hugo-theme"
 tags = []
 features = []
 min_version = "0.41.0"
