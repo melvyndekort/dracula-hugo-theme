@@ -1,0 +1,11 @@
+name = "Mytheme"
+license = "MIT"
+description = ""
+homepage = "https://linktr.ee/melvyndekort"
+tags = []
+features = []
+min_version = "0.41.0"
+
+[author]
+  name = "Melvyn de Kort"
+  homepage = "https://linktr.ee/melvyndekort"
