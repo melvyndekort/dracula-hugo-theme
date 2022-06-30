@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100">
   {{- partial "head.html" . -}}
-  <body class="d-flex flex-column h-100 bg-dark">
+  <body class="d-flex flex-column h-100 bg-dark text-orange">
     {{- partial "header.html" . -}}
     <main id="maincontent" role="main" aria-label="Content" class="flex-shrink-0">
-      <h2>{{ .Description }}</h2>
-      <br/>
       {{- block "main" . }}{{- end }}
     </main>
     {{- partial "footer.html" . -}}
