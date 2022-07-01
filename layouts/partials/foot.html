@@ -5,3 +5,7 @@
 
 <!-- load other optional js -->
 <script src="https://kit.fontawesome.com/6bfcea34f1.js" crossorigin="anonymous"></script>
+
+{{ range .Site.Params.custom_js -}}
+<script type="text/javascript" src="{{ . | absURL }}"></script>
+{{- end }}

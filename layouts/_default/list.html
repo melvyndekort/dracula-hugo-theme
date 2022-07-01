@@ -1,9 +1,16 @@
 {{ define "main" }}
-  <ul>
-  {{ range .Pages }}
-    <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
-  {{ end }}
-  </ul>
-
-  {{ .Content }}
+  <div class="container my-4">
+    {{ .Content }}
+  </div>
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col col-md-auto">
+        <div class="btn-group-vertical" role="group" aria-label="Basic navigation button group">
+        {{ range .Pages.ByParam "order" }}
+        <a href="{{.RelPermalink}}" class="btn btn-outline-purple btn-lg">{{.Title}}</a>
+        {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
 {{ end }}
