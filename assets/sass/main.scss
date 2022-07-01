@@ -69,5 +69,4 @@ $custom-colors: (
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
 // 6. Add additional custom code here
-//@import "node_modules/bootstrap/scss/bootstrap.scss";
 @import "styles.scss";

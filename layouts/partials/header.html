@@ -9,7 +9,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
       <div class="navbar-nav">
-        {{ range .Site.RegularPages }}
+        {{ range .Site.RegularPages.ByParam "order" }}
           {{ if eq .Page $.Page }}
           <a class="nav-link active" aria-current="page" href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
           {{ else }}

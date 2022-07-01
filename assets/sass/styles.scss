@@ -45,6 +45,7 @@ $yiq-text-light:            #fff !default;
         box-shadow: 0 0 0 0.2rem rgba(mix(color-yiq($background), $border, 15%), 0.5);
     }
 }
+
 /* mixin to create btn-outline */
 @mixin theme-button-outline($color, $color-hover: color-yiq($color), $active-background: $color, $active-border: $color) {
     color: $color;
@@ -72,6 +73,32 @@ $yiq-text-light:            #fff !default;
         box-shadow: 0 0 0 0.2rem rgba($color, 0.5);
     }
 }
+
+/* mixin to generate list-group-items */
+@mixin theme-list-group-item($background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%)) {
+    color: #fff;
+    background-color: $background;
+    border-color: $border;
+    &:hover {
+        color: #fff;
+        background-color: $hover-background;
+        border-color: $hover-border;
+    }
+    &:focus, &.focus {
+        box-shadow: 0 0 0 0.2rem rgba(mix(color-yiq($background), $border, 15%), 0.5);
+    }
+    &:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active,
+    .show > &.dropdown-toggle {
+        color: #fff;
+        background-color: $active-background;
+        border-color: $active-border;
+    }
+    &:not(:disabled):not(.disabled):active:focus, &:not(:disabled):not(.disabled).active:focus,
+    .show > &.dropdown-toggle:focus {
+        box-shadow: 0 0 0 0.2rem rgba(mix(color-yiq($background), $border, 15%), 0.5);
+    }
+}
+
 /* mixin to create text color variants */
 @mixin theme-text($parent, $color) {
     #{$parent} {
@@ -117,6 +144,12 @@ $yiq-text-light:            #fff !default;
 @each $color, $value in $theme-colors {
     .btn-outline-#{$color} {
         @include theme-button-outline($value);
+    }
+}
+/* each function to create all the list-group-items */
+@each $color, $value in $theme-colors {
+    .list-group-item-#{$color} {
+        @include theme-list-group-item($value, $value);
     }
 }
 /* each function to create text colors */
