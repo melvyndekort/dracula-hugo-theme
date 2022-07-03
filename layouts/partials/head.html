@@ -5,7 +5,7 @@
 <title>{{ .Site.Title }} | {{ .Page.Title }}</title>
 <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
 <meta name="author" content="{{ .Site.Params.Author }}">
-<link rel="icon" href="https://assets.easydmarc.com/872082e7b7/bimi-mdekort-nl-6bfeef63.svg">
+<link rel="icon" href="https://assets.mdekort.nl/logo.svg">
 
 {{ $options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed") }}
 {{ $style := resources.Get "sass/main.scss" | toCSS  $options | minify }}
