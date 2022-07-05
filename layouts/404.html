@@ -1,14 +1,20 @@
-{{ define "main"}}
-<p>Sorry, but the page you were trying to view does not exist.</p>
-<pre><code>
- ____________
+{{ define "main" }}
+  <div class="container-fluid py-5 bg-background">
+    <h1 class="text-center mb-4 text-danger fs-1 fw-bold">404</h1>
+    <h2 class="text-center mb-4 fs-5">Sorry, but the page you were trying to view does not exist.</h2>
+    <div class="row justify-content-md-center">
+      <div class="col-md-auto">
+        <pre><code>
+____________
 < Sorry, 404 >
- ------------
-        \   ^__^
-         \  (oo)\_______
+------------
+       \   ^__^
+        \  (oo)\_______
             (__)\       )\/\
                 ||----w |
                 ||     ||
-
-</code></pre>
+        </code></pre>
+      </div>
+    </div>
+  </div>
 {{ end }}
