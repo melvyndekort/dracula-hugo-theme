@@ -168,3 +168,9 @@ $yiq-text-light:            #fff !default;
 @each $color, $value in $theme-colors {
     @include theme-border(".border-#{$color}", $value);
 }
+
+/* code block styling */
+pre {
+    background-color: $secondary;
+    padding: 10px;
+}
