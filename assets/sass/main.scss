@@ -17,10 +17,12 @@ $background: #383a59;
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/variables-dark";
+@import "node_modules/bootstrap/scss/maps";
 @import "node_modules/bootstrap/scss/mixins";
 @import "node_modules/bootstrap/scss/utilities";
 
-// 4. Include any optional Bootstrap components as you like
+// 4. Include layout & components
 @import "node_modules/bootstrap/scss/root";
 @import "node_modules/bootstrap/scss/reboot";
 @import "node_modules/bootstrap/scss/type";
@@ -53,6 +55,7 @@ $background: #383a59;
 @import "node_modules/bootstrap/scss/offcanvas";
 @import "node_modules/bootstrap/scss/placeholders";
 
+// Helpers
 @import "node_modules/bootstrap/scss/helpers";
 
 // Utilities
