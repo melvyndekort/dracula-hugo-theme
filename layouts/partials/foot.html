@@ -1,6 +1,5 @@
 <!-- Bootstrap JS bundle -->
-{{ $js_list := resources.GetMatch "js/*.js" }}
-{{ $js := slice $js_list | resources.Concat "js/bundle.js" | resources.Minify }}
+{{ $js := resources.Match "js/*.js" | resources.Concat "js/bundle.js" | resources.Minify }}
 <script src="{{$js.RelPermalink}}" defer></script>
 
 {{ range .Site.Params.custom_js -}}
