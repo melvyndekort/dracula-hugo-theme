@@ -6,4 +6,7 @@
 <link rel="icon" href="https://assets.mdekort.nl/logo.svg">
 {{- $options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed") }}
 {{- $style := resources.Get "sass/main.scss" | toCSS  $options | minify }}
-<link rel="stylesheet" href="{{ $style.RelPermalink }}" media="screen">
+<link rel="stylesheet" href="{{ $style.Permalink }}" media="screen">
+{{- range .Site.Params.custom_css }}
+<link rel="stylesheet" href="{{ . | absURL}}" media="screen">
+{{- end }}

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
   <div class="container-fluid">
-      <a class="navbar-brand fs-4 fw-bold text-light" style="font-family: Georgia, 'Times New Roman', Times, serif;" href="{{ .Site.Home.RelPermalink }}">
+      <a class="navbar-brand fs-4 fw-bold text-light" style="font-family: Georgia, 'Times New Roman', Times, serif;" href="{{ .Site.Home.Permalink }}">
         <img src="https://assets.mdekort.nl/logo.svg" alt="logo" width="50px" class="d-inline-block align-middle me-2" />
         {{ .Site.Title }}
       </a>
@@ -11,9 +11,9 @@
         <div class="navbar-nav">
 {{- range .Site.RegularPages.ByParam "order" }}
 {{- if eq .Page $.Page }}
-            <a class="nav-link active" aria-current="page" href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
+            <a class="nav-link active" aria-current="page" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
 {{- else }}
-            <a class="nav-link" href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
+            <a class="nav-link" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
 {{- end }}
 {{- end }}
         </div>
