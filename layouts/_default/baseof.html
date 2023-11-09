@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100">
   <head>
-    {{- partial "head.html" . -}}
+{{ partial "head.html" . }}
+{{- block "extra-head" . }}
+{{- end }}
   </head>
   <body class="d-flex flex-column h-100 bg-dark text-orange">
-    {{- partial "header.html" . -}}
+{{ partial "header.html" . }}
     <main id="maincontent" role="main" aria-label="Content" class="flex-shrink-0">
-      {{- block "main" . }}{{- end }}
+{{- block "main" . }}
+{{- end }}
     </main>
-    {{- partial "footer.html" . -}}
-    {{- partial "foot.html" . -}}
+{{ partial "footer.html" . }}
+{{- block "extra-foot" . }}
+{{- end }}
+{{ partial "foot.html" . -}}
   </body>
 </html>

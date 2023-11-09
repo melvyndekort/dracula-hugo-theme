@@ -1,15 +1,9 @@
-
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <title>{{ .Site.Title }} | {{ .Page.Title }}</title>
 <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
 <meta name="author" content="{{ .Site.Params.Author }}">
 <link rel="icon" href="https://assets.mdekort.nl/logo.svg">
-
-{{ $options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed") }}
-{{ $style := resources.Get "sass/main.scss" | toCSS  $options | minify }}
+{{- $options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed") }}
+{{- $style := resources.Get "sass/main.scss" | toCSS  $options | minify }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" media="screen">
-{{ range .Site.Params.custom_css -}}
-<link rel="stylesheet" href="{{ . | relURL }}">
-{{- end }}
